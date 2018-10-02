@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/pc80/PhonegapProjects/my-app-c/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/pc80/PhonegapProjects/my-app-c/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>

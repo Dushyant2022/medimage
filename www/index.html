@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        
+        <link href="css/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/onsenui.min.css" rel="stylesheet"  type="text/css" />
+        <link href="css/onsen-css-components.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <title>Medimage mobile app</title>
+    </head>
+    <body>
+        <ons-navigator swipeable id="myNavigator" page="home.html"></ons-navigator>
+        <template id="home.html">
+            <ons-page id="home">
+                <ons-toolbar modifier='material'>
+                    <div class="center">Home <ons-progress-circular class="loading-circle" indeterminate></ons-progress-circular></div>
+                </ons-toolbar>
+                <div class="page-content">
+                    <p>
+                        <ons-input input-id="data" style="width: 100%;" modifier="material" placeholder="Patient Details" float></ons-input>
+                        <div class="custom-dropdown">
+                            <div class="dropdown-content">
+                                
+                            </div>
+                        </div>
+                    </p>
+                    <p>
+                        <ons-button modifier="material large" onclick="insert_patient();">Insert</ons-button>
+                    </p>
+                    <ons-fab position="bottom right">
+                        <i class="material-icons">autorenew</i>
+                    </ons-fab>
+                </div>
+            </ons-page> 
+        </template>
+
+        <script src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="js/select2.full.js"></script>
+        <script src="js/onsenui.js"></script>
+    </body>
+</html>
